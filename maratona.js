@@ -197,19 +197,68 @@ console.log("___________________________________________________"); */
 } */
 
 // 3. Faça um programa que peça um número ao usuário e calcule a soma de todos os números de 1 até esse número.
-// let usuario_numero6 = prompt('Digite um número:');
+let usuario_numero6 = prompt('Digite um número:');
+let promop_array = usuario_numero6.split('').map(num);
+console.log(promop_array.)
 
+for (let v =0; v < usuario_numero6.length; v++) {
+    console.log(usuario_numero6[v]);
+}
 
 
 // Manipulação de Objetos
 // ----------------------------
 
 // 1. Crie um array de objetos "Produto" e escreva uma função que calcule o valor total em estoque.
-const Produto = {};
+const produto = [
+    {item:'A', quantidade:7},
+    {item:'B', quantidade:2},
+    {item:'C', quantidade:8},
+    {item:'D', quantidade:5}
+];
 
+const estoque = produto.map((produto) => produto.quantidade);
+console.log(estoque[0] + estoque[1] + estoque[2] + estoque[3]);
+
+console.log(produto.reduce((p, {quantidade}) => p + quantidade, 0)); // a letra p á apenas uma representação e pode ser alterada por qualquer outro valor
 
 // 2. Implemente um método em um objeto "Estudante" que retorna se o estudante está aprovado ou reprovado, com base em suas notas.
+// const estudantes = [
+//     {aluno:'Mariana', nota: 8.5},
+//     {aluno:'Rosa', nota: 6},
+//     {aluno:'Paulo', nota: 3.5},
+//     {aluno:'Pedro', nota: 0},
+//     {aluno:'Carla', nota: -1}
+// ]
 
+// const aprovados = (estudantes) => {
+//     estudantes.forEach(estudante => {
+//         switch (true) {
+//             case estudante.nota >= 5 && estudante.nota <= 10:
+//                 console.log(`${estudante.aluno} está aprovada !`);
+//                 break;
+
+//             case estudante.nota < 5 && estudante.nota >= 0:
+//                 console.log(`${estudante.aluno} está reprovado !`);
+//                 break;
+        
+//             default:
+//                 console.log('Nota Inválida !');
+//                 break;
+//         }
+//     });
+// }
+// aprovados(estudantes);
+
+// switch (estudante_nota) {
+//     case (estudante_nota <= 0 && estudante_nota >= 5):
+//         console.log('Você está reprovado !');
+//         break;
+
+//     default:
+//         console.log('Você está aprovado !');
+//         break;
+// }
 
 // 3. Crie uma função que, dada uma lista de objetos "Funcionario", calcule a soma dos salários.
 
